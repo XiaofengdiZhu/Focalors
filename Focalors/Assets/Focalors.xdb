@@ -1,0 +1,10 @@
+﻿<Mod>
+	<Folder Name="Abstract" Guid="e6fcac21-922d-4234-97c0-fe6feb5a0697">
+		<SubsystemTemplate Name="FocalorsFluidBlockBehavior" Guid="f656e6e0-79ad-4a10-89bc-ecb0ac5b1864" InheritanceParent="fefb9590-4972-4893-b02a-76063611b745"/>
+	</Folder>
+	<ProjectTemplate Name="Project" Guid="85023bf8-1c90-4dd1-9442-e6c13691d078">
+		<MemberSubsystemTemplate Name="FocalorsWaterBlockBehavior" Guid="9971b7c8-62a6-4451-80b7-a75c28bdb26a" InheritanceParent="f656e6e0-79ad-4a10-89bc-ecb0ac5b1864">
+			<Parameter Name="Class" Guid="9c01176f-44dd-41f8-a626-753e05cf8c62" Value="Game.SubsystemFocalorsWaterBlockBehavior" Type="string"/>
+		</MemberSubsystemTemplate>
+	</ProjectTemplate>
+</Mod>

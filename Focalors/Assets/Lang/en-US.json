@@ -1,0 +1,8 @@
+﻿{
+  "Blocks": {
+    "FocalorsWaterBlock:0": {
+      "DisplayName": "Focalors Water",
+      "Description": "The water simulates real water flow. The original water continuously flow out just because there is a source, but Focalors Water doesn't."
+    }
+  }
+}

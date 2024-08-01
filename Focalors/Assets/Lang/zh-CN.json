@@ -1,0 +1,8 @@
+﻿{
+  "Blocks": {
+    "FocalorsWaterBlock:0": {
+      "DisplayName": "芙卡洛斯之水",
+      "Description": "模拟真实水体流动的水，不像原版的水只要有源头就会不断流出。"
+    }
+  }
+}
