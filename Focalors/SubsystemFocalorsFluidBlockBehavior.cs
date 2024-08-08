@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Engine;
@@ -228,14 +228,16 @@ namespace Game {
                         if (averageVolume > 0.005f) {
                             centerLeftVolume = averageVolume;
                             foreach ((Point3 sidePosition, float sideVolume) in toFluidVolume) {
-                                if (m_toSpread.TryGetValue(sidePosition, out SpreadData sideSpreadData)) {
-                                    sideSpreadData.Volume = averageVolume;
-                                }
-                                else if (toDestroy.Contains(sidePosition)) {
-                                    m_toSpread.Add(sidePosition, new SpreadData(averageVolume, true));
-                                }
-                                else if (Math.Abs(sideVolume - averageVolume) > 0.005f) {
-                                    m_toSpread.Add(sidePosition, new SpreadData(averageVolume, false));
+                                if (Math.Abs(sideVolume - averageVolume) > 0.005f) {
+                                    if (m_toSpread.TryGetValue(sidePosition, out SpreadData sideSpreadData)) {
+                                        sideSpreadData.Volume = averageVolume;
+                                    }
+                                    else if (toDestroy.Contains(sidePosition)) {
+                                        m_toSpread.Add(sidePosition, new SpreadData(averageVolume, true));
+                                    }
+                                    else {
+                                        m_toSpread.Add(sidePosition, new SpreadData(averageVolume, false));
+                                    }
                                 }
                             }
                         }
