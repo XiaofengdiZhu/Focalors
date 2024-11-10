@@ -13,38 +13,20 @@
 		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<GenerateDependencyFile>false</GenerateDependencyFile>
-		<Prefer32Bit>false</Prefer32Bit>
+		<ErrorReport>prompt</ErrorReport>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-		<DebugSymbols>true</DebugSymbols>
-		<DebugType>full</DebugType>
-		<Optimize>false</Optimize>
+		<DebugType>pdbonly</DebugType>
 		<OutputPath>bin\Debug\</OutputPath>
-		<DefineConstants>DEBUG;TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
 		<DebugType>none</DebugType>
-		<Optimize>true</Optimize>
 		<OutputPath>bin\Release\</OutputPath>
-		<DefineConstants>TRACE</DefineConstants>
-		<ErrorReport>prompt</ErrorReport>
-		<WarningLevel>4</WarningLevel>
 	</PropertyGroup>
 	<ItemGroup>
-		<Reference Include="Engine">
-			<HintPath>reference\Engine.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="EntitySystem">
-			<HintPath>reference\EntitySystem.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
-		<Reference Include="Survivalcraft">
-			<HintPath>reference\Survivalcraft.dll</HintPath>
-			<Private>False</Private>
-		</Reference>
+		<PackageReference Include="SurvivalcraftAPI.Engine" Version="1.7.2.2"/>
+		<PackageReference Include="SurvivalcraftAPI.EntitySystem" Version="1.7.2.2"/>
+		<PackageReference Include="SurvivalcraftAPI.Survivalcraft" Version="1.7.2.2"/>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Include="FocalorsFluidBlock.cs"/>

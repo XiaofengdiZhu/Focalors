@@ -1,7 +1,7 @@
 {
   "Name": "Focalors Water 芙卡洛斯之水",
-  "Version": "1.0",
-  "ApiVersion": "1.71",
+  "Version": "1.1",
+  "ApiVersion": "1.72",
   "Description": "模拟真实水体流动 Simulate real water flow",
   "ScVersion": "2.3.0.0",
   "Link": "https://github.com/XiaofengdiZhu/Focalors",

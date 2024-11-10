@@ -4,11 +4,11 @@ namespace Game {
 
         public float m_soundVolume;
 
-        public override int[] HandledBlocks => [FocalorsWaterBlock.Index];
+        public override int[] HandledBlocks => [BlocksManager.GetBlockIndex<FocalorsWaterBlock>(true, true)];
 
         public UpdateOrder UpdateOrder => UpdateOrder.Default;
 
-        public SubsystemFocalorsWaterBlockBehavior() : base(FocalorsWaterBlock.Index) { }
+        public SubsystemFocalorsWaterBlockBehavior() : base(BlocksManager.GetBlockIndex<FocalorsWaterBlock>(true, true)) { }
 
         public void Update(float dt) {
             if (SubsystemTime.PeriodicGameTimeEvent(0.25, 0.0)) {
